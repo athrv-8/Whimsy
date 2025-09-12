@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanaya - Voice Over & Story Narration</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F8F8; /* Soft white/cream */
+        }
+
+        .cta-button {
+            @apply px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105;
+        }
+
+        .cta-button.primary {
+            @apply bg-[#007bff] text-white shadow-lg hover:shadow-xl; /* Bright blue for CTA */
+        }
+
+        .cta-button.secondary {
+            @apply border-2 border-[#007bff] text-[#007bff] hover:bg-[#007bff] hover:text-white;
+        }
+        
+        /* Simple sound wave animation for the hero section */
+        @keyframes soundWave {
+            0% {
+                transform: scaleY(0.5);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scaleY(1.5);
+                opacity: 1;
+            }
+            100% {
+                transform: scaleY(0.5);
+                opacity: 0.8;
+            }
+        }
+        
+        .sound-wave-bar {
+            animation: soundWave 2s infinite ease-in-out;
+            animation-delay: calc(var(--delay) * 0.2s);
+        }
+
+        .form-input {
+            @apply w-full p-3 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-[#007bff] transition-colors duration-200;
+        }
+
+    </style>
+</head>
+
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-[#007bff]">Shanaya</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-[#007bff] transition-colors duration-200">About</a>
+                <a href="#services" class="hover:text-[#007bff] transition-colors duration-200">Services</a>
+                <a href="#portfolio" class="hover:text-[#007bff] transition-colors duration-200">Portfolio</a>
+                <a href="#contact" class="hover:text-[#007bff] transition-colors duration-200">Contact</a>
+            </div>
+            <!-- Simple mobile menu placeholder -->
+            <button class="md:hidden text-2xl">
+                &#9776;
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center p-4 bg-gradient-to-br from-cream-100 to-cream-200 via-white overflow-hidden">
+        <div class="absolute inset-0 bg-white opacity-25"></div>
+        <div class="z-10 text-center space-y-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#1a237e] leading-tight">Your Words, My Voice.</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                Captivating voice overs and compelling story narration to bring your projects to life.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 pt-4">
+                <a href="#portfolio" class="cta-button primary">Listen to Demo</a>
+                <a href="#contact" class="cta-button secondary">Hire Me</a>
+            </div>
+        </div>
+        <!-- Optional subtle sound wave animation -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-1 sm:space-x-2">
+            <div class="sound-wave-bar bg-[#007bff] w-1 h-12 rounded-full" style="--delay: 1;"></div>
+            <div class="sound-wave-bar bg-[#007bff] w-1 h-12 rounded-full" style="--delay: 2;"></div>
+            <div class="sound-wave-bar bg-[#007bff] w-1 h-12 rounded-full" style="--delay: 3;"></div>
+            <div class="sound-wave-bar bg-[#007bff] w-1 h-12 rounded-full" style="--delay: 4;"></div>
+            <div class="sound-wave-bar bg-[#007bff] w-1 h-12 rounded-full" style="--delay: 5;"></div>
+            <div class="sound-wave-bar bg-[#007bff] w-1 h-12 rounded-full" style="--delay: 6;"></div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="container mx-auto p-8 py-16 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">About Shanaya</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 max-w-4xl mx-auto">
+            <div class="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shadow-lg border-4 border-white">
+                <img src="https://placehold.co/400x400/808080/FFFFFF?text=Shanaya" alt="Shanaya's profile picture" class="object-cover w-full h-full">
+            </div>
+            <p class="text-md md:text-lg text-gray-600 max-w-xl text-left md:text-left">
+                Hello, I'm Shanaya, a professional voice-over artist and story narrator with a passion for bringing narratives to life. I specialize in a wide range of styles, from warm and trustworthy for explainer videos to dynamic and engaging for audiobooks. My goal is to use the power of my voice to help you connect with your audience and tell your story with impact. Let's create something memorable together.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto p-8 py-16 bg-white rounded-xl shadow-lg my-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">My Services</h2>
+        <div class="flex flex-col md:flex-row justify-center gap-8">
+            <!-- Voice Over Card -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                <h3 class="text-xl font-semibold mb-2 text-[#007bff]">Voice Over</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Professional voiceovers for commercials, explainer videos, podcasts, and more. Clear, crisp, and perfectly tailored to your project's tone. I provide high-quality audio files ready for immediate use.
+                </p>
+            </div>
+            <!-- Story Narration Card -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                <h3 class="text-xl font-semibold mb-2 text-[#007bff]">Story Narration</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Engaging narration for audiobooks, bed-time stories, and educational content. I specialize in captivating audiences and creating immersive listening experiences that transport them into your world.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Demo Reel Section -->
+    <section id="portfolio" class="container mx-auto p-8 py-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Portfolio & Demo Reel</h2>
+        <div class="flex flex-col md:flex-row justify-center gap-8 max-w-4xl mx-auto">
+            <!-- Voice Over Demo -->
+            <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                <h3 class="text-xl font-semibold mb-4">Voice Over Samples</h3>
+                <audio controls class="w-full rounded-lg">
+                    <source src="voice-sample.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-sm text-gray-500 mt-2">Note: Please replace 'voice-sample.mp3' with your actual audio file.</p>
+            </div>
+            <!-- Story Narration Demo -->
+            <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                <h3 class="text-xl font-semibold mb-4">Story Narration Samples</h3>
+                <audio controls class="w-full rounded-lg">
+                    <source src="story-sample.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-sm text-gray-500 mt-2">Note: Please replace 'story-sample.mp3' with your actual audio file.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto p-8 py-16 bg-white rounded-xl shadow-lg my-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
+        <div class="max-w-xl mx-auto space-y-8">
+            <!-- Contact Info -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-center md:text-left">
+                <div class="flex items-center space-x-2">
+                    <span class="text-[#007bff] font-bold">Email:</span>
+                    <a href="mailto:mrhackershivansh143@gmail.com" class="text-gray-600 hover:text-[#007bff] transition-colors">mrhackershivansh143@gmail.com</a>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="text-[#007bff] font-bold">Phone:</span>
+                    <a href="tel:8779989576" class="text-gray-600 hover:text-[#007bff] transition-colors">8779989576</a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form action="#" method="POST" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message/Project Details</label>
+                    <textarea id="message" name="message" rows="4" class="form-input" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="cta-button primary w-full">Send Message</button>
+                </div>
+            </form>
+            <p class="text-center text-sm text-gray-500">
+                Note: This form is for display purposes. A backend service is required to process and send form submissions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a237e] text-white py-8 text-center">
+        <div class="container mx-auto">
+            <p class="mb-4">© 2025 Shanaya – Voice Over & Story Narration | All Rights Reserved</p>
+            <!-- Optional Social Links -->
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-[#007bff] transition-colors duration-200">Instagram</a>
+                <a href="#" class="hover:text-[#007bff] transition-colors duration-200">LinkedIn</a>
+                <a href="#" class="hover:text-[#007bff] transition-colors duration-200">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
 
